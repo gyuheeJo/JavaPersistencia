@@ -8,14 +8,13 @@ package com.mycompany.cat_app;
  *
  * @author gyuhee
  */
-public class Cat {
-    
+public class CatFav {
+
     private String id;
-    private String url;
-    private String image;
+    private String image_id;
     private String apikey = "live_441pNC5wtfXk17Saoag2ewfo2aU9l3XPPEw7BproNee5rOjoslcLG1ZDvoic3x1X";
-    
-    
+    private Image image;
+
     public String getId() {
         return id;
     }
@@ -24,12 +23,12 @@ public class Cat {
         this.id = id;
     }
 
-    public String getUrl() {
-        return url;
+    public String getImage_id() {
+        return image_id;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setImage_id(String image_id) {
+        this.image_id = image_id;
     }
 
     public String getApikey() {
@@ -40,14 +39,12 @@ public class Cat {
         this.apikey = apikey;
     }
 
-    public String getImage() {
+    public Image getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Image image) {
         this.image = image;
     }
-    
-    
-    
+
 }

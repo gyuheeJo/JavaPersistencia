@@ -3,6 +3,7 @@
  */
 package com.mycompany.cat_app;
 
+import java.io.IOException;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
 
@@ -12,27 +13,27 @@ import javax.swing.JOptionPane;
  */
 public class Cat_app {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int option = -1;
-        String[] options = {"1. ver gatos", "2 salir"};
-        
+        String[] options = {"1. ver gatos", "2. ver favoritos","3. salir"};
+
         do {
 
             String selected = (String) JOptionPane.showInputDialog(null, "cat java", "menu", JOptionPane.INFORMATION_MESSAGE,
                     null, options, options[0]);
             option = Arrays.asList(options).indexOf(selected);
-        } while (option != 1);
-        
-        switch (option) {
-            case 0:
-                CatService.showCat();
-                break;
-            case 1:
-                
-                break;
-            default:
-                break;
-        }
+
+            switch (option) {
+                case 0:
+                    CatService.showCat();
+                    break;
+                case 1:
+                    CatService.showFavourites();
+                    break;
+                default:
+                    break;
+            }
+        } while (option != 2);
 
     }
 }
